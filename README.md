@@ -3,8 +3,19 @@
 Work in progress. A simple RBAC Authorization middleware for Express. Written in typescript
 for all your code autocompletion needs.
 
+```
+npm i --save express-rbac-authz-middleware
+```
+
+```js
+import { AuthzMiddleware } from 'express-rbac-authz-middleware';
+```
+
+
 ## Sample usage
 ```js
+import { AuthzMiddleware } from 'express-rbac-authz-middleware';
+
 const app = express()
 
 const options = {
@@ -29,7 +40,8 @@ app.get('/guest', (req, resp) => {
 ```
 
 ## Setup
-TODO
+
+In your express app:
 ```js
 const options = {
 tokenDecoder: (req) => ({
