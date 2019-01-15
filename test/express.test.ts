@@ -16,17 +16,13 @@ describe('express middleware', () => {
   app.get('/user', (req: any, resp) => {
     req.authz.all('user')
     resp.json({ msg: 'Hello User' })
-    resp.end()
   })
   app.get('/admin', (req: any, resp) => {
-    req.authz.all('admin')
+    req.authz.is('admin')
     resp.json({ msg: 'Hello Admin' })
-    resp.end()
   })
   app.get('/guest', (req, resp) => {
-    console.log('awwasdasdasdsd')
     resp.json({ msg: 'Hello Guest' })
-    resp.end()
   })
 
   it('returns ok when guest', async () => {
