@@ -12,7 +12,7 @@
   "author": "Joakim Uddholm <joakim@uddholm.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Tethik/express-rbac-authz-middleware"
   },
   "license": "MIT",
   "engines": {
